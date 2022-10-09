@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupay Logo</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: wrap;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.card{
+    position:relative;
+    width: 300px;
+    height:350px;
+    margin:20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .circle::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(246, 68, 3);
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.card:hover .circle::before{
+    clip-path: circle(400px at center);
+}
+
+.card:hover{
+    width: 600px;
+    transition-delay: 0;
+}
+.card .circle .logo{
+    position: relative;
+    width: 200px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+.content{
+    position: relative;
+    width: 70%;
+    left:50%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+.card:hover .content{
+    position: absolute;
+    left:0;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.content img{
+    position: relative;
+    width: 180px;
+}
+.content p{
+    color: white;
+    position: relative;
+    top: -30px;
+    left: -20px;
+    /* letter-spacing: .6px; */
+    font-weight: bold;
+    white-space: 1;
+    font-family: 'Roboto', sans-serif;
+}
+.ext img{
+    position: absolute;
+    top:90px;
+    left:370px;
+    width: 250px;
+    height: 230px;
+}
+.content a{
+    font-size: 1.2rem; 
+}
+
+</style>
+<body>
+    <div class="card">
+        <div class="circle">
+            <img src="logo2.png" class="logo" alt="">
+        </div>
+        <div class="content">
+            <img src="logo2.png">
+            <p>RuPay is the first-of-its-kind global Card payment network of India, with wide acceptance at ATMs, POS devices and e-commerce websites across India. It is a highly secure network that protects against anti-phishing. The name, derived from the words ‘Rupee and ‘Payment’, emphasizes that it is India’s very own initiative for Card payments. It is our answer to international payment networks, expressing pride over our nationality.</p>
+            <a href="">Explore</a>
+        <div class="ext">
+            <img src="cont.png" alt="">
+        </div>
+        </div>
+    </div>
+</body>
+</html>
